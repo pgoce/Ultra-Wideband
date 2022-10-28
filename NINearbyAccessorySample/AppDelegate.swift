@@ -8,6 +8,7 @@ A class that responds to application life cycle events.
 import UIKit
 import NearbyInteraction
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
