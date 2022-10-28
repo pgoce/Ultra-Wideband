@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		5B8D1ED2290C289200B8B7EA /* UltraWidebandApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D1ED1290C289200B8B7EA /* UltraWidebandApp.swift */; };
-		5B8D1ED4290C289200B8B7EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D1ED3290C289200B8B7EA /* ContentView.swift */; };
 		5B8D1ED6290C289300B8B7EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D1ED5290C289300B8B7EA /* Assets.xcassets */; };
 		5B8D1ED9290C289300B8B7EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D1ED8290C289300B8B7EA /* Preview Assets.xcassets */; };
 		5B8D1EE3290C289300B8B7EA /* UltraWidebandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D1EE2290C289300B8B7EA /* UltraWidebandTests.swift */; };
 		5B8D1EED290C289300B8B7EA /* UltraWidebandUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D1EEC290C289300B8B7EA /* UltraWidebandUITests.swift */; };
 		5B8D1EEF290C289300B8B7EA /* UltraWidebandUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D1EEE290C289300B8B7EA /* UltraWidebandUITestsLaunchTests.swift */; };
-		5B8D1EFC290C2D5D00B8B7EA /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D1EFB290C2D5D00B8B7EA /* Storyboard.storyboard */; };
-		5B8D1EFE290C2E0300B8B7EA /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D1EFD290C2E0300B8B7EA /* View.xib */; };
+		5B8D1F00290C42B000B8B7EA /* BluetoothSupport in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D1EFF290C42B000B8B7EA /* BluetoothSupport */; };
+		5B8D1F0E290C44F000B8B7EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D1F0D290C44F000B8B7EA /* AppDelegate.swift */; };
+		5BB86219290C563E0078F0B2 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB86218290C563E0078F0B2 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 /* Begin PBXFileReference section */
 		5B8D1ECE290C289200B8B7EA /* UltraWideband.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltraWideband.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8D1ED1290C289200B8B7EA /* UltraWidebandApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltraWidebandApp.swift; sourceTree = "<group>"; };
-		5B8D1ED3290C289200B8B7EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5B8D1ED5290C289300B8B7EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B8D1ED8290C289300B8B7EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5B8D1EDE290C289300B8B7EA /* UltraWidebandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UltraWidebandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,8 +45,9 @@
 		5B8D1EE8290C289300B8B7EA /* UltraWidebandUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UltraWidebandUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8D1EEC290C289300B8B7EA /* UltraWidebandUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltraWidebandUITests.swift; sourceTree = "<group>"; };
 		5B8D1EEE290C289300B8B7EA /* UltraWidebandUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltraWidebandUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		5B8D1EFB290C2D5D00B8B7EA /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
-		5B8D1EFD290C2E0300B8B7EA /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		5B8D1EFF290C42B000B8B7EA /* BluetoothSupport */ = {isa = PBXFileReference; lastKnownFileType = folder; name = BluetoothSupport; path = "../../../Qorvo_Apple-main/Sources/ImplementingSpatialInteractionsWithThirdPartyAccessories/NINearbyAccessorySample/BluetoothSupport"; sourceTree = "<group>"; };
+		5B8D1F0D290C44F000B8B7EA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../ImplementingSpatialInteractionsWithThirdPartyAccessories/NINearbyAccessorySample/AppDelegate.swift; sourceTree = "<group>"; };
+		5BB86218290C563E0078F0B2 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +98,12 @@
 		5B8D1ED0290C289200B8B7EA /* UltraWideband */ = {
 			isa = PBXGroup;
 			children = (
+				5B8D1EFF290C42B000B8B7EA /* BluetoothSupport */,
+				5B8D1F0D290C44F000B8B7EA /* AppDelegate.swift */,
 				5B8D1ED1290C289200B8B7EA /* UltraWidebandApp.swift */,
-				5B8D1ED3290C289200B8B7EA /* ContentView.swift */,
 				5B8D1ED5290C289300B8B7EA /* Assets.xcassets */,
 				5B8D1ED7290C289300B8B7EA /* Preview Content */,
-				5B8D1EFB290C2D5D00B8B7EA /* Storyboard.storyboard */,
-				5B8D1EFD290C2E0300B8B7EA /* View.xib */,
+				5BB86218290C563E0078F0B2 /* Storyboard.storyboard */,
 			);
 			path = UltraWideband;
 			sourceTree = "<group>";
@@ -237,10 +237,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B8D1EFE290C2E0300B8B7EA /* View.xib in Resources */,
 				5B8D1ED9290C289300B8B7EA /* Preview Assets.xcassets in Resources */,
+				5BB86219290C563E0078F0B2 /* Storyboard.storyboard in Resources */,
+				5B8D1F00290C42B000B8B7EA /* BluetoothSupport in Resources */,
 				5B8D1ED6290C289300B8B7EA /* Assets.xcassets in Resources */,
-				5B8D1EFC290C2D5D00B8B7EA /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B8D1ED4290C289200B8B7EA /* ContentView.swift in Sources */,
+				5B8D1F0E290C44F000B8B7EA /* AppDelegate.swift in Sources */,
 				5B8D1ED2290C289200B8B7EA /* UltraWidebandApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
