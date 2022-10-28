@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B8D1ED2290C289200B8B7EA /* UltraWidebandApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D1ED1290C289200B8B7EA /* UltraWidebandApp.swift */; };
+		5B8D1ED4290C289200B8B7EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D1ED3290C289200B8B7EA /* ContentView.swift */; };
+		5B8D1ED6290C289300B8B7EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D1ED5290C289300B8B7EA /* Assets.xcassets */; };
+		5B8D1ED9290C289300B8B7EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D1ED8290C289300B8B7EA /* Preview Assets.xcassets */; };
+		5B8D1EE3290C289300B8B7EA /* UltraWidebandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D1EE2290C289300B8B7EA /* UltraWidebandTests.swift */; };
+		5B8D1EED290C289300B8B7EA /* UltraWidebandUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D1EEC290C289300B8B7EA /* UltraWidebandUITests.swift */; };
+		5B8D1EEF290C289300B8B7EA /* UltraWidebandUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D1EEE290C289300B8B7EA /* UltraWidebandUITestsLaunchTests.swift */; };
+		5B8D1EFC290C2D5D00B8B7EA /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D1EFB290C2D5D00B8B7EA /* Storyboard.storyboard */; };
+		5B8D1EFE290C2E0300B8B7EA /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D1EFD290C2E0300B8B7EA /* View.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B8D1EDF290C289300B8B7EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B8D1EC6290C289200B8B7EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B8D1ECD290C289200B8B7EA;
+			remoteInfo = UltraWideband;
+		};
+		5B8D1EE9290C289300B8B7EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B8D1EC6290C289200B8B7EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B8D1ECD290C289200B8B7EA;
+			remoteInfo = UltraWideband;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5B8D1ECE290C289200B8B7EA /* UltraWideband.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltraWideband.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B8D1ED1290C289200B8B7EA /* UltraWidebandApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltraWidebandApp.swift; sourceTree = "<group>"; };
+		5B8D1ED3290C289200B8B7EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5B8D1ED5290C289300B8B7EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B8D1ED8290C289300B8B7EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5B8D1EDE290C289300B8B7EA /* UltraWidebandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UltraWidebandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B8D1EE2290C289300B8B7EA /* UltraWidebandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltraWidebandTests.swift; sourceTree = "<group>"; };
+		5B8D1EE8290C289300B8B7EA /* UltraWidebandUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UltraWidebandUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B8D1EEC290C289300B8B7EA /* UltraWidebandUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltraWidebandUITests.swift; sourceTree = "<group>"; };
+		5B8D1EEE290C289300B8B7EA /* UltraWidebandUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltraWidebandUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5B8D1EFB290C2D5D00B8B7EA /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		5B8D1EFD290C2E0300B8B7EA /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B8D1ECB290C289200B8B7EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B8D1EDB290C289300B8B7EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B8D1EE5290C289300B8B7EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B8D1EC5290C289200B8B7EA = {
+			isa = PBXGroup;
+			children = (
+				5B8D1ED0290C289200B8B7EA /* UltraWideband */,
+				5B8D1EE1290C289300B8B7EA /* UltraWidebandTests */,
+				5B8D1EEB290C289300B8B7EA /* UltraWidebandUITests */,
+				5B8D1ECF290C289200B8B7EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B8D1ECF290C289200B8B7EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B8D1ECE290C289200B8B7EA /* UltraWideband.app */,
+				5B8D1EDE290C289300B8B7EA /* UltraWidebandTests.xctest */,
+				5B8D1EE8290C289300B8B7EA /* UltraWidebandUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B8D1ED0290C289200B8B7EA /* UltraWideband */ = {
+			isa = PBXGroup;
+			children = (
+				5B8D1ED1290C289200B8B7EA /* UltraWidebandApp.swift */,
+				5B8D1ED3290C289200B8B7EA /* ContentView.swift */,
+				5B8D1ED5290C289300B8B7EA /* Assets.xcassets */,
+				5B8D1ED7290C289300B8B7EA /* Preview Content */,
+				5B8D1EFB290C2D5D00B8B7EA /* Storyboard.storyboard */,
+				5B8D1EFD290C2E0300B8B7EA /* View.xib */,
+			);
+			path = UltraWideband;
+			sourceTree = "<group>";
+		};
+		5B8D1ED7290C289300B8B7EA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5B8D1ED8290C289300B8B7EA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5B8D1EE1290C289300B8B7EA /* UltraWidebandTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B8D1EE2290C289300B8B7EA /* UltraWidebandTests.swift */,
+			);
+			path = UltraWidebandTests;
+			sourceTree = "<group>";
+		};
+		5B8D1EEB290C289300B8B7EA /* UltraWidebandUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5B8D1EEC290C289300B8B7EA /* UltraWidebandUITests.swift */,
+				5B8D1EEE290C289300B8B7EA /* UltraWidebandUITestsLaunchTests.swift */,
+			);
+			path = UltraWidebandUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B8D1ECD290C289200B8B7EA /* UltraWideband */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B8D1EF2290C289300B8B7EA /* Build configuration list for PBXNativeTarget "UltraWideband" */;
+			buildPhases = (
+				5B8D1ECA290C289200B8B7EA /* Sources */,
+				5B8D1ECB290C289200B8B7EA /* Frameworks */,
+				5B8D1ECC290C289200B8B7EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UltraWideband;
+			productName = UltraWideband;
+			productReference = 5B8D1ECE290C289200B8B7EA /* UltraWideband.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B8D1EDD290C289300B8B7EA /* UltraWidebandTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B8D1EF5290C289300B8B7EA /* Build configuration list for PBXNativeTarget "UltraWidebandTests" */;
+			buildPhases = (
+				5B8D1EDA290C289300B8B7EA /* Sources */,
+				5B8D1EDB290C289300B8B7EA /* Frameworks */,
+				5B8D1EDC290C289300B8B7EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B8D1EE0290C289300B8B7EA /* PBXTargetDependency */,
+			);
+			name = UltraWidebandTests;
+			productName = UltraWidebandTests;
+			productReference = 5B8D1EDE290C289300B8B7EA /* UltraWidebandTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5B8D1EE7290C289300B8B7EA /* UltraWidebandUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B8D1EF8290C289300B8B7EA /* Build configuration list for PBXNativeTarget "UltraWidebandUITests" */;
+			buildPhases = (
+				5B8D1EE4290C289300B8B7EA /* Sources */,
+				5B8D1EE5290C289300B8B7EA /* Frameworks */,
+				5B8D1EE6290C289300B8B7EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B8D1EEA290C289300B8B7EA /* PBXTargetDependency */,
+			);
+			name = UltraWidebandUITests;
+			productName = UltraWidebandUITests;
+			productReference = 5B8D1EE8290C289300B8B7EA /* UltraWidebandUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B8D1EC6290C289200B8B7EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					5B8D1ECD290C289200B8B7EA = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					5B8D1EDD290C289300B8B7EA = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 5B8D1ECD290C289200B8B7EA;
+					};
+					5B8D1EE7290C289300B8B7EA = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 5B8D1ECD290C289200B8B7EA;
+					};
+				};
+			};
+			buildConfigurationList = 5B8D1EC9290C289200B8B7EA /* Build configuration list for PBXProject "UltraWideband" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B8D1EC5290C289200B8B7EA;
+			productRefGroup = 5B8D1ECF290C289200B8B7EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B8D1ECD290C289200B8B7EA /* UltraWideband */,
+				5B8D1EDD290C289300B8B7EA /* UltraWidebandTests */,
+				5B8D1EE7290C289300B8B7EA /* UltraWidebandUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B8D1ECC290C289200B8B7EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B8D1EFE290C2E0300B8B7EA /* View.xib in Resources */,
+				5B8D1ED9290C289300B8B7EA /* Preview Assets.xcassets in Resources */,
+				5B8D1ED6290C289300B8B7EA /* Assets.xcassets in Resources */,
+				5B8D1EFC290C2D5D00B8B7EA /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B8D1EDC290C289300B8B7EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B8D1EE6290C289300B8B7EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B8D1ECA290C289200B8B7EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B8D1ED4290C289200B8B7EA /* ContentView.swift in Sources */,
+				5B8D1ED2290C289200B8B7EA /* UltraWidebandApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B8D1EDA290C289300B8B7EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B8D1EE3290C289300B8B7EA /* UltraWidebandTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B8D1EE4290C289300B8B7EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B8D1EED290C289300B8B7EA /* UltraWidebandUITests.swift in Sources */,
+				5B8D1EEF290C289300B8B7EA /* UltraWidebandUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B8D1EE0290C289300B8B7EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B8D1ECD290C289200B8B7EA /* UltraWideband */;
+			targetProxy = 5B8D1EDF290C289300B8B7EA /* PBXContainerItemProxy */;
+		};
+		5B8D1EEA290C289300B8B7EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B8D1ECD290C289200B8B7EA /* UltraWideband */;
+			targetProxy = 5B8D1EE9290C289300B8B7EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5B8D1EF0290C289300B8B7EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B8D1EF1290C289300B8B7EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B8D1EF3290C289300B8B7EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"UltraWideband/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = NJTransit.UltraWideband;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5B8D1EF4290C289300B8B7EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"UltraWideband/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = NJTransit.UltraWideband;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5B8D1EF6290C289300B8B7EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = NJTransit.UltraWidebandTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UltraWideband.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/UltraWideband";
+			};
+			name = Debug;
+		};
+		5B8D1EF7290C289300B8B7EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = NJTransit.UltraWidebandTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UltraWideband.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/UltraWideband";
+			};
+			name = Release;
+		};
+		5B8D1EF9290C289300B8B7EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = NJTransit.UltraWidebandUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UltraWideband;
+			};
+			name = Debug;
+		};
+		5B8D1EFA290C289300B8B7EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = NJTransit.UltraWidebandUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UltraWideband;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B8D1EC9290C289200B8B7EA /* Build configuration list for PBXProject "UltraWideband" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B8D1EF0290C289300B8B7EA /* Debug */,
+				5B8D1EF1290C289300B8B7EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B8D1EF2290C289300B8B7EA /* Build configuration list for PBXNativeTarget "UltraWideband" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B8D1EF3290C289300B8B7EA /* Debug */,
+				5B8D1EF4290C289300B8B7EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B8D1EF5290C289300B8B7EA /* Build configuration list for PBXNativeTarget "UltraWidebandTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B8D1EF6290C289300B8B7EA /* Debug */,
+				5B8D1EF7290C289300B8B7EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B8D1EF8290C289300B8B7EA /* Build configuration list for PBXNativeTarget "UltraWidebandUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B8D1EF9290C289300B8B7EA /* Debug */,
+				5B8D1EFA290C289300B8B7EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B8D1EC6290C289200B8B7EA /* Project object */;
+}
