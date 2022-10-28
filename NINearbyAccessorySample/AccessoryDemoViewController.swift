@@ -171,10 +171,24 @@ extension AccessoryDemoViewController: NISessionDelegate {
     
     func session(_ session: NISession, didUpdate nearbyObjects: [NINearbyObject]) {
         guard let accessory = nearbyObjects.first else { return }
-        guard let distance = accessory.distance else { return }
+        guard var distance = accessory.distance else { return }
+        guard var direction = accessory.direction else { return }
         guard let name = accessoryMap[accessory.discoveryToken] else { return }
+        //Where distance is displayed on the front end
+        // Apply a moving average filter to distance and direction
+        includeDistance(distance)
+        distance = getAvgDistance()
+
+        includeDirection(direction)
+        direction = getAvgDirection()
+        // Calculates azimuth and elevation from the average result
+        let azimuth = Int(90 * azimuth(direction))
+        let elevation = Int(90 * elevation(direction))
         
-        self.distanceLabel.text = String(format: "'%@' is %0.1f meters away", name, distance)
+        /*original code
+        self.distanceLabel.text = String(format: "'%@' is %0.1f meters away", name, distance)*/
+        // Update Label
+        self.distanceLabel.text = String(format: "\n\n\n\n\n\n\n%0.1f meters away\nAzimuth: %d°\nElevation: %d°\nName: %d",distance, azimuth, elevation,name)
         self.distanceLabel.sizeToFit()
     }
     
@@ -226,7 +240,7 @@ extension AccessoryDemoViewController: NISessionDelegate {
 
 extension AccessoryDemoViewController {
     func updateInfoLabel(with text: String) {
-        self.infoLabel.text = text
+       // self.infoLabel.text = text
         self.distanceLabel.sizeToFit()
         logger.info("\(text)")
     }
@@ -286,4 +300,69 @@ extension AccessoryDemoViewController {
         // Preset the access alert.
         present(accessAlert, animated: true, completion: nil)
     }
+}
+//added these functions that were created
+
+var distArray: Array<Float> = Array(repeating: 0, count: 10)
+let zeroVector = simd_make_float3(0, 0, 0)
+var diretArray: Array<simd_float3> = Array(repeating: zeroVector, count: 10)
+var avgDistIndex = 0
+var avgDiretIndex = 0
+
+// Provides the azimuth from an argument 3D directional.
+func azimuth(_ direction: simd_float3) -> Float {
+    return asin(direction.x)
+}
+
+// Provides the elevation from the argument 3D directional.
+func elevation(_ direction: simd_float3) -> Float {
+    return atan2(direction.z, direction.y) + .pi / 2
+}
+
+func includeDistance(_ value: Float) {
+
+    distArray[avgDistIndex] = value
+
+    if avgDistIndex < (distArray.count - 1) {
+        avgDistIndex += 1
+    }
+    else {
+        avgDistIndex = 0
+    }
+}
+
+func getAvgDistance() -> Float {
+    var sumValue: Float
+
+    sumValue = 0
+
+    for value in distArray {
+        sumValue += value
+    }
+
+    return Float(sumValue)/Float(distArray.count)
+}
+
+func includeDirection(_ value: simd_float3) {
+
+    diretArray[avgDiretIndex] = value
+
+    if avgDiretIndex < (diretArray.count - 1) {
+        avgDiretIndex += 1
+    }
+    else {
+        avgDiretIndex = 0
+    }
+}
+
+func getAvgDirection() -> simd_float3 {
+    var sumValue: simd_float3
+
+    sumValue = zeroVector
+
+    for value in diretArray {
+        sumValue += value
+    }
+
+    return simd_float3(sumValue)/Float(diretArray.count)
 }
