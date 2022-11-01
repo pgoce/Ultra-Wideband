@@ -187,7 +187,7 @@ extension AccessoryDemoViewController: NISessionDelegate {
         
         /*original code
         self.distanceLabel.text = String(format: "'%@' is %0.1f meters away", name, distance)*/
-        // Update Label
+        // Update Label added to show azimuth and elevation
         self.distanceLabel.text = String(format: "\n\n\n\n\n\n\n%0.1f meters away\nAzimuth: %d°\nElevation: %d°\nName: %d",distance, azimuth, elevation,name)
         self.distanceLabel.sizeToFit()
     }
@@ -301,7 +301,7 @@ extension AccessoryDemoViewController {
         present(accessAlert, animated: true, completion: nil)
     }
 }
-//added these functions that were created
+//added these functions that were created joe
 
 var distArray: Array<Float> = Array(repeating: 0, count: 10)
 let zeroVector = simd_make_float3(0, 0, 0)
