@@ -41,6 +41,10 @@ class AccessoryDemoViewController: UIViewController {
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var actionButton: UIButton!
     
+    //Added this for a start and stop function, this is seen on the front end
+    let btnRun = "Start Session"
+    let btnStop = "Stop Session"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,12 +57,30 @@ class AccessoryDemoViewController: UIViewController {
         dataChannel.accessoryDataHandler = accessorySharedData
         dataChannel.start()
         
+        /*Adding this to try on 11/2 for stop and start sessions*/
+        actionButton.setTitle(btnRun, for: .normal)
+        
         updateInfoLabel(with: "Scanning for accessories")
     }
-    
-    @IBAction func buttonAction(_ sender: Any) {
+    //commented this orginal part out
+    /*@IBAction func buttonAction(_ sender: Any) {
+        
         updateInfoLabel(with: "Requesting configuration data from accessory")
         let msg = Data([MessageId.initialize.rawValue])
+        sendDataToAccessory(msg)
+    } */
+    //Addes this for some addede fucntionality of the stop and start
+    @IBAction func buttonAction(_ sender: Any) {
+        var msg: Data
+
+        if actionButton.titleLabel!.text == btnRun {
+            updateInfoLabel(with: "Requesting configuration data from accessory")
+            msg = Data([MessageId.initialize.rawValue])
+        } else {
+            updateInfoLabel(with: "Requesting accessory to stop")
+            msg = Data([MessageId.stop.rawValue])
+        }
+
         sendDataToAccessory(msg)
     }
     
@@ -107,6 +129,8 @@ class AccessoryDemoViewController: UIViewController {
     
     func accessoryDisconnected() {
         accessoryConnected = false
+        
+        actionButton.setTitle(btnRun, for: .normal)
         actionButton.isEnabled = false
         connectedAccessoryName = nil
         connectionStateLabel.text = "Not Connected"
@@ -134,15 +158,19 @@ class AccessoryDemoViewController: UIViewController {
     
     func handleAccessoryUwbDidStart() {
         updateInfoLabel(with: "Accessory session started.")
-        actionButton.isEnabled = false
+        // actionButton.isEnabled = false
+        actionButton.setTitle(btnStop, for: .normal)
+        actionButton.setTitleColor(UIColor.red, for: .normal)
         self.uwbStateLabel.text = "ON"
     }
     
     func handleAccessoryUwbDidStop() {
         updateInfoLabel(with: "Accessory session stopped.")
-        if accessoryConnected {
+       /* if accessoryConnected {
             actionButton.isEnabled = true
-        }
+        } */
+        actionButton.setTitle(btnRun, for: .normal) //added this for function to stop and start button
+        actionButton.setTitleColor(UIColor.systemBlue, for: .normal)
         self.uwbStateLabel.text = "OFF"
     }
 }
@@ -188,7 +216,7 @@ extension AccessoryDemoViewController: NISessionDelegate {
         /*original code
         self.distanceLabel.text = String(format: "'%@' is %0.1f meters away", name, distance)*/
         // Update Label added to show azimuth and elevation
-        self.distanceLabel.text = String(format: "\n\n\n\n\n\n\n%0.1f meters away\nAzimuth: %d°\nElevation: %d°\nName: %d",distance, azimuth, elevation,name)
+        self.distanceLabel.text = String(format: "\n\n\n\n\n\n\n%0.1f meters away\nAzimuth: %d°\nElevation: %d°\nName: '%@'",distance, azimuth, elevation,name)
         self.distanceLabel.sizeToFit()
     }
     
