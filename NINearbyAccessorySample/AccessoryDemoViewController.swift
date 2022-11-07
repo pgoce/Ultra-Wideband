@@ -8,7 +8,6 @@ A view controller that facilitates the Nearby Interaction Accessory user experie
 import UIKit
 import NearbyInteraction
 import os.log
-
 // An example messaging protocol for communications between the app and the
 // accessory. In your app, modify or extend this enumeration to your app's
 // user experience and conform the accessory accordingly.
@@ -59,6 +58,10 @@ class AccessoryDemoViewController: UIViewController {
         
         // Set a delegate for session updates from the framework.
         niSession.delegate = self
+        logger.info("Ni Session: \(self.niSession)")
+        logger.info("Ni Session 2: \(self.niSession2)")
+
+        logger.info("Map Session: \(self.accessoryMap)")
         
         // Prepare the data communication channel.
         dataChannel.accessoryConnectedHandler = accessoryConnected
@@ -98,6 +101,7 @@ class AccessoryDemoViewController: UIViewController {
     func accessorySharedData(data: Data, accessoryName: String) {
         // The accessory begins each message with an identifier byte.
         // Ensure the message length is within a valid range.
+        logger.info("Size: \(data.count)")
         if data.count < 1 {
             updateInfoLabel(with: "Accessory shared data length was less than 1.")
             return
@@ -211,10 +215,13 @@ extension AccessoryDemoViewController: NISessionDelegate {
     
     
     func session(_ session: NISession, didUpdate nearbyObjects: [NINearbyObject]) {
+        logger.info("Object Count1: \(nearbyObjects.count)")
         guard let accessory = nearbyObjects.first else { return }
         guard var distance = accessory.distance else { return }
         guard var direction = accessory.direction else { return }
         guard let name = accessoryMap[accessory.discoveryToken] else { return }
+        logger.info("Object Count2: \(self.accessoryMap.count)")
+
        // guard accessoryMap2[accessory.discoveryToken] != nil else { return }//added this
         //Where distance is displayed on the front end
         // Apply a moving average filter to distance and direction
@@ -325,6 +332,8 @@ extension AccessoryDemoViewController {
     
     func cacheToken(_ token: NIDiscoveryToken, accessoryName: String) {
         accessoryMap[token] = accessoryName
+        logger.info("Cached a token: \(self.accessoryMap.count)")
+        logger.info("Cached a token: \(self.accessoryMap)")
         //accessoryMap2[token] = accessoryName
         
     }
