@@ -8,7 +8,6 @@ A view controller that facilitates the Nearby Interaction Accessory user experie
 import UIKit
 import NearbyInteraction
 import os.log
-
 // An example messaging protocol for communications between the app and the
 // accessory. In your app, modify or extend this enumeration to your app's
 // user experience and conform the accessory accordingly.
@@ -28,13 +27,16 @@ class AccessoryDemoViewController: UIViewController {
     var dataChannel = DataCommunicationChannel()
 
      var niSession = NISession() //This creates the session between the app and the devices
-   
+     var niSession2 = NISession()//added this to start another session with another device
+    
     var configuration: NINearbyAccessoryConfiguration?
     var accessoryConnected = false
     var connectedAccessoryName: String?
+    
     // A mapping from a discovery token to a name.
-  
-  var accessoryMap = [NIDiscoveryToken: String]() //A Discorvery token temporarly generates a device-ession indetntifier,valid for the lifetime of the session, the system provies it to your app and you echnage it throught your apps networking layer
+   var accessoryMap = [NIDiscoveryToken: String]()
+    //var accessoryMap2 = [NIDiscoveryToken: String]()
+    //A Discorvery token temporarly generates a device-ession indetntifier,valid for the lifetime of the session, the system provies it to your app and you echnage it throught your apps networking layer
 
     
     let logger = os.Logger(subsystem: "com.example.apple-samplecode.NINearbyAccessorySample", category: "AccessoryDemoViewController")
@@ -43,6 +45,8 @@ class AccessoryDemoViewController: UIViewController {
     @IBOutlet weak var uwbStateLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var distanceLabel2: UILabel!
+    
     @IBOutlet weak var actionButton: UIButton!
     
     //Added this for a start and stop function, this is seen on the front end
@@ -54,6 +58,10 @@ class AccessoryDemoViewController: UIViewController {
         
         // Set a delegate for session updates from the framework.
         niSession.delegate = self
+        logger.info("Ni Session: \(self.niSession)")
+        logger.info("Ni Session 2: \(self.niSession2)")
+
+        logger.info("Map Session: \(self.accessoryMap)")
         
         // Prepare the data communication channel.
         dataChannel.accessoryConnectedHandler = accessoryConnected
@@ -93,6 +101,7 @@ class AccessoryDemoViewController: UIViewController {
     func accessorySharedData(data: Data, accessoryName: String) {
         // The accessory begins each message with an identifier byte.
         // Ensure the message length is within a valid range.
+        logger.info("Size: \(data.count)")
         if data.count < 1 {
             updateInfoLabel(with: "Accessory shared data length was less than 1.")
             return
@@ -158,6 +167,7 @@ class AccessoryDemoViewController: UIViewController {
         // Cache the token to correlate updates with this accessory.
         cacheToken(configuration!.accessoryDiscoveryToken, accessoryName: name)
         niSession.run(configuration!)
+        niSession2.run(configuration!)//added this
     }
     
     func handleAccessoryUwbDidStart() {
@@ -195,17 +205,24 @@ extension AccessoryDemoViewController: NISessionDelegate {
         logger.info("Sending shareable configuration bytes: \(str)")
         
         let accessoryName = accessoryMap[object.discoveryToken] ?? "Unknown"
+        //let accessoryName2 = accessoryMap2[object.discoveryToken] ?? "Unknown"
         
         // Send the message to the accessory.
         sendDataToAccessory(msg)
         updateInfoLabel(with: "Sent shareable configuration data to '\(accessoryName)'.")
     }
     
+    
+    
     func session(_ session: NISession, didUpdate nearbyObjects: [NINearbyObject]) {
+        logger.info("Object Count1: \(nearbyObjects.count)")
         guard let accessory = nearbyObjects.first else { return }
         guard var distance = accessory.distance else { return }
         guard var direction = accessory.direction else { return }
         guard let name = accessoryMap[accessory.discoveryToken] else { return }
+        logger.info("Object Count2: \(self.accessoryMap.count)")
+
+       // guard accessoryMap2[accessory.discoveryToken] != nil else { return }//added this
         //Where distance is displayed on the front end
         // Apply a moving average filter to distance and direction
         includeDistance(distance)
@@ -222,6 +239,10 @@ extension AccessoryDemoViewController: NISessionDelegate {
         // Update Label added to show azimuth and elevation
         self.distanceLabel.text = String(format: "\n\n\n\n\n\n\n%0.1f meters away\nAzimuth: %d°\nElevation: %d°\nName: '%@'",distance, azimuth, elevation,name)
         self.distanceLabel.sizeToFit()
+        //added this below
+       // self.distanceLabel2.text = String(format: "\n\n\n\n\n\n\n%0.1f meters away\nAzimuth: %d°\nElevation: %d°\nName: '%@'",distance, azimuth, elevation,name)
+       // self.distanceLabel2.sizeToFit()
+        
     }
     
     func session(_ session: NISession, didRemove nearbyObjects: [NINearbyObject], reason: NINearbyObject.RemovalReason) {
@@ -234,6 +255,7 @@ extension AccessoryDemoViewController: NISessionDelegate {
         
         // Clear the app's accessory state.
         accessoryMap.removeValue(forKey: accessory.discoveryToken)
+       // accessoryMap2.removeValue(forKey: accessory.discoveryToken)//added this
         
         // Consult helper function to decide whether or not to retry.
         if shouldRetry(accessory) {
@@ -293,6 +315,9 @@ extension AccessoryDemoViewController {
         // Replace the invalidated session with a new one.
         self.niSession = NISession()
         self.niSession.delegate = self
+        
+        self.niSession2 = NISession()//added these two line
+        self.niSession2.delegate = self
 
         // Ask the accessory to stop.
         sendDataToAccessory(Data([MessageId.initialize.rawValue]))
@@ -307,6 +332,10 @@ extension AccessoryDemoViewController {
     
     func cacheToken(_ token: NIDiscoveryToken, accessoryName: String) {
         accessoryMap[token] = accessoryName
+        logger.info("Cached a token: \(self.accessoryMap.count)")
+        logger.info("Cached a token: \(self.accessoryMap)")
+        //accessoryMap2[token] = accessoryName
+        
     }
     
     func handleUserDidNotAllow() {
@@ -333,7 +362,9 @@ extension AccessoryDemoViewController {
         present(accessAlert, animated: true, completion: nil)
     }
 }
-//added these functions that were created joe
+
+
+//added these functions that were created joe****
 
 var distArray: Array<Float> = Array(repeating: 0, count: 10)
 let zeroVector = simd_make_float3(0, 0, 0)
